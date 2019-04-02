@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invaders View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InvadersViewController" customModule="TVInvaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsa-o7-Vn1" userLabel="Game View">
+                                <rect key="frame" x="610" y="60" width="700" height="960"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cw-yQ-qe4" userLabel="Base Line">
+                                        <rect key="frame" x="8" y="958" width="684" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="Vxj-3E-qkE"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ncx-m9-1lL">
+                                        <rect key="frame" x="8" y="8" width="684" height="60"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-pH-5uN">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-kE-dvZ">
+                                                <rect key="frame" x="231" y="0.0" width="222" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wso-lq-biU">
+                                                <rect key="frame" x="461" y="0.0" width="223" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8E7-kd-e5l"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-qu-sw1" userLabel="Cover View">
+                                        <rect key="frame" x="8" y="76" width="684" height="874"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2cw-yQ-qe4" secondAttribute="trailing" constant="8" id="8Bh-lp-akV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ncx-m9-1lL" secondAttribute="trailing" constant="8" id="9TA-zs-TEz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lgh-qu-sw1" secondAttribute="trailing" constant="8" id="EHQ-uJ-PUo"/>
+                                    <constraint firstItem="2cw-yQ-qe4" firstAttribute="top" secondItem="Lgh-qu-sw1" secondAttribute="bottom" constant="8" id="EKz-av-tKy"/>
+                                    <constraint firstItem="2cw-yQ-qe4" firstAttribute="leading" secondItem="Tsa-o7-Vn1" secondAttribute="leading" constant="8" id="HOf-id-1jj"/>
+                                    <constraint firstItem="Lgh-qu-sw1" firstAttribute="leading" secondItem="Tsa-o7-Vn1" secondAttribute="leading" constant="8" id="I6a-rF-TtX"/>
+                                    <constraint firstItem="Lgh-qu-sw1" firstAttribute="top" secondItem="ncx-m9-1lL" secondAttribute="bottom" constant="8" id="QkR-Ib-CmB"/>
+                                    <constraint firstItem="ncx-m9-1lL" firstAttribute="leading" secondItem="Tsa-o7-Vn1" secondAttribute="leading" constant="8" id="VMM-4Z-bBf"/>
+                                    <constraint firstAttribute="bottom" secondItem="2cw-yQ-qe4" secondAttribute="bottom" id="Xbl-Ag-84n"/>
+                                    <constraint firstItem="ncx-m9-1lL" firstAttribute="top" secondItem="Tsa-o7-Vn1" secondAttribute="top" constant="8" id="nlv-zA-WEL"/>
+                                    <constraint firstAttribute="width" constant="700" id="tOW-5g-qvo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tsa-o7-Vn1" secondAttribute="bottom" id="5dD-Jn-WX6"/>
+                            <constraint firstItem="Tsa-o7-Vn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FnE-je-RuC"/>
+                            <constraint firstItem="Tsa-o7-Vn1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hnk-WO-sNA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                    </view>
+                    <connections>
+                        <outlet property="baseLine" destination="2cw-yQ-qe4" id="LZa-qe-PkO"/>
+                        <outlet property="coverView" destination="Lgh-qu-sw1" id="uwf-fJ-JMB"/>
+                        <outlet property="gameView" destination="Tsa-o7-Vn1" id="T2g-Q7-6tz"/>
+                        <outlet property="levelBox" destination="E1h-pH-5uN" id="N77-1S-RDo"/>
+                        <outlet property="livesBox" destination="nX2-kE-dvZ" id="Ief-bl-mBJ"/>
+                        <outlet property="scoreBox" destination="wso-lq-biU" id="VvI-Wh-PJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

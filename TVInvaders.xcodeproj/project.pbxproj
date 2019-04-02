@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		344BCC392253842300A31ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC382253842300A31ADA /* AppDelegate.swift */; };
+		344BCC3B2253842300A31ADA /* InvadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC3A2253842300A31ADA /* InvadersViewController.swift */; };
+		344BCC3E2253842300A31ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC3C2253842300A31ADA /* Main.storyboard */; };
+		344BCC402253842400A31ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC3F2253842400A31ADA /* Assets.xcassets */; };
+		344BCC482253846700A31ADA /* AlphaNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC472253846700A31ADA /* AlphaNumeric.swift */; };
+		344BCC4F2253847200A31ADA /* ufo_highpitch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4A2253847200A31ADA /* ufo_highpitch.wav */; };
+		344BCC502253847200A31ADA /* invaderkilled.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4B2253847200A31ADA /* invaderkilled.wav */; };
+		344BCC512253847200A31ADA /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4C2253847200A31ADA /* shoot.wav */; };
+		344BCC522253847200A31ADA /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4D2253847200A31ADA /* explosion.wav */; };
+		344BCC532253847200A31ADA /* fastinvader1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4E2253847200A31ADA /* fastinvader1.wav */; };
+		344BCC552253847C00A31ADA /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC542253847C00A31ADA /* Sprite.swift */; };
+		344BCC572253848C00A31ADA /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC562253848C00A31ADA /* SoundFX.swift */; };
+		344BCC592253849600A31ADA /* InvadersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC582253849600A31ADA /* InvadersModel.swift */; };
+		344BCC5B225384A000A31ADA /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC5A225384A000A31ADA /* extentions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		344BCC352253842300A31ADA /* TVInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		344BCC382253842300A31ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		344BCC3A2253842300A31ADA /* InvadersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvadersViewController.swift; sourceTree = "<group>"; };
+		344BCC3D2253842300A31ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		344BCC3F2253842400A31ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		344BCC412253842400A31ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		344BCC472253846700A31ADA /* AlphaNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaNumeric.swift; sourceTree = "<group>"; };
+		344BCC4A2253847200A31ADA /* ufo_highpitch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ufo_highpitch.wav; sourceTree = "<group>"; };
+		344BCC4B2253847200A31ADA /* invaderkilled.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = invaderkilled.wav; sourceTree = "<group>"; };
+		344BCC4C2253847200A31ADA /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
+		344BCC4D2253847200A31ADA /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		344BCC4E2253847200A31ADA /* fastinvader1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fastinvader1.wav; sourceTree = "<group>"; };
+		344BCC542253847C00A31ADA /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
+		344BCC562253848C00A31ADA /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFX.swift; sourceTree = "<group>"; };
+		344BCC582253849600A31ADA /* InvadersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvadersModel.swift; sourceTree = "<group>"; };
+		344BCC5A225384A000A31ADA /* extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		344BCC322253842300A31ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		344BCC2C2253842300A31ADA = {
+			isa = PBXGroup;
+			children = (
+				344BCC372253842300A31ADA /* TVInvaders */,
+				344BCC362253842300A31ADA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		344BCC362253842300A31ADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				344BCC352253842300A31ADA /* TVInvaders.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		344BCC372253842300A31ADA /* TVInvaders */ = {
+			isa = PBXGroup;
+			children = (
+				344BCC5A225384A000A31ADA /* extentions.swift */,
+				344BCC582253849600A31ADA /* InvadersModel.swift */,
+				344BCC562253848C00A31ADA /* SoundFX.swift */,
+				344BCC542253847C00A31ADA /* Sprite.swift */,
+				344BCC492253847200A31ADA /* Sounds */,
+				344BCC472253846700A31ADA /* AlphaNumeric.swift */,
+				344BCC382253842300A31ADA /* AppDelegate.swift */,
+				344BCC3A2253842300A31ADA /* InvadersViewController.swift */,
+				344BCC3C2253842300A31ADA /* Main.storyboard */,
+				344BCC3F2253842400A31ADA /* Assets.xcassets */,
+				344BCC412253842400A31ADA /* Info.plist */,
+			);
+			path = TVInvaders;
+			sourceTree = "<group>";
+		};
+		344BCC492253847200A31ADA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				344BCC4A2253847200A31ADA /* ufo_highpitch.wav */,
+				344BCC4B2253847200A31ADA /* invaderkilled.wav */,
+				344BCC4C2253847200A31ADA /* shoot.wav */,
+				344BCC4D2253847200A31ADA /* explosion.wav */,
+				344BCC4E2253847200A31ADA /* fastinvader1.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		344BCC342253842300A31ADA /* TVInvaders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 344BCC442253842400A31ADA /* Build configuration list for PBXNativeTarget "TVInvaders" */;
+			buildPhases = (
+				344BCC312253842300A31ADA /* Sources */,
+				344BCC322253842300A31ADA /* Frameworks */,
+				344BCC332253842300A31ADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVInvaders;
+			productName = TVInvaders;
+			productReference = 344BCC352253842300A31ADA /* TVInvaders.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		344BCC2D2253842300A31ADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Jaypeeff;
+				TargetAttributes = {
+					344BCC342253842300A31ADA = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 344BCC302253842300A31ADA /* Build configuration list for PBXProject "TVInvaders" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 344BCC2C2253842300A31ADA;
+			productRefGroup = 344BCC362253842300A31ADA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				344BCC342253842300A31ADA /* TVInvaders */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		344BCC332253842300A31ADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344BCC522253847200A31ADA /* explosion.wav in Resources */,
+				344BCC532253847200A31ADA /* fastinvader1.wav in Resources */,
+				344BCC4F2253847200A31ADA /* ufo_highpitch.wav in Resources */,
+				344BCC402253842400A31ADA /* Assets.xcassets in Resources */,
+				344BCC3E2253842300A31ADA /* Main.storyboard in Resources */,
+				344BCC512253847200A31ADA /* shoot.wav in Resources */,
+				344BCC502253847200A31ADA /* invaderkilled.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		344BCC312253842300A31ADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344BCC3B2253842300A31ADA /* InvadersViewController.swift in Sources */,
+				344BCC592253849600A31ADA /* InvadersModel.swift in Sources */,
+				344BCC392253842300A31ADA /* AppDelegate.swift in Sources */,
+				344BCC5B225384A000A31ADA /* extentions.swift in Sources */,
+				344BCC572253848C00A31ADA /* SoundFX.swift in Sources */,
+				344BCC552253847C00A31ADA /* Sprite.swift in Sources */,
+				344BCC482253846700A31ADA /* AlphaNumeric.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		344BCC3C2253842300A31ADA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				344BCC3D2253842300A31ADA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		344BCC422253842400A31ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+			};
+			name = Debug;
+		};
+		344BCC432253842400A31ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		344BCC452253842400A31ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GZ8FVR7LN;
+				INFOPLIST_FILE = TVInvaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.TVInvaders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		344BCC462253842400A31ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GZ8FVR7LN;
+				INFOPLIST_FILE = TVInvaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.TVInvaders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		344BCC302253842300A31ADA /* Build configuration list for PBXProject "TVInvaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344BCC422253842400A31ADA /* Debug */,
+				344BCC432253842400A31ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		344BCC442253842400A31ADA /* Build configuration list for PBXNativeTarget "TVInvaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344BCC452253842400A31ADA /* Debug */,
+				344BCC462253842400A31ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 344BCC2D2253842300A31ADA /* Project object */;
+}
