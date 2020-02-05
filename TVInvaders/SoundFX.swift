@@ -69,8 +69,8 @@ final class SoundFX {
     
     func invaderSound()
     {
-//        guard let invaderAudioPlayer = invaderAudioPlayer else { return }
- //       Thread.detachNewThreadSelector(#selector(play), toTarget: self, with: invaderAudioPlayer)
+        guard let invaderAudioPlayer = invaderAudioPlayer else { return }
+        Thread.detachNewThreadSelector(#selector(play), toTarget: self, with: invaderAudioPlayer)
     }
     
 }

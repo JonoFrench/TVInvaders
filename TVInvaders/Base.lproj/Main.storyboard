@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,15 +34,15 @@
                                         <rect key="frame" x="8" y="8" width="684" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-pH-5uN">
-                                                <rect key="frame" x="0.0" y="0.0" width="223" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="222.5" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-kE-dvZ">
-                                                <rect key="frame" x="231" y="0.0" width="222" height="60"/>
+                                                <rect key="frame" x="230.5" y="0.0" width="223" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wso-lq-biU">
-                                                <rect key="frame" x="461" y="0.0" width="223" height="60"/>
+                                                <rect key="frame" x="461.5" y="0.0" width="222.5" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -72,12 +70,28 @@
                                     <constraint firstAttribute="width" constant="700" id="tOW-5g-qvo"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-dE-CUt">
+                                <rect key="frame" x="0.0" y="60" width="610" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM2-QA-nhf">
+                                <rect key="frame" x="1310" y="60" width="610" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tsa-o7-Vn1" secondAttribute="bottom" id="5dD-Jn-WX6"/>
+                            <constraint firstAttribute="trailing" secondItem="TM2-QA-nhf" secondAttribute="trailing" id="FHC-Rl-Vxi"/>
                             <constraint firstItem="Tsa-o7-Vn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FnE-je-RuC"/>
                             <constraint firstItem="Tsa-o7-Vn1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hnk-WO-sNA"/>
+                            <constraint firstItem="TM2-QA-nhf" firstAttribute="leading" secondItem="Tsa-o7-Vn1" secondAttribute="trailing" id="KhD-kS-gtU"/>
+                            <constraint firstItem="TM2-QA-nhf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Yco-Wo-TPw"/>
+                            <constraint firstItem="Tsa-o7-Vn1" firstAttribute="leading" secondItem="DR6-dE-CUt" secondAttribute="trailing" id="g0H-lr-Oxw"/>
+                            <constraint firstItem="DR6-dE-CUt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jx3-UQ-lMy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DR6-dE-CUt" secondAttribute="bottom" id="mYG-Zr-yJn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TM2-QA-nhf" secondAttribute="bottom" id="nNe-C5-lxC"/>
+                            <constraint firstItem="DR6-dE-CUt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tY6-Qb-kW2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
@@ -92,6 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="77" y="181"/>
         </scene>
     </scenes>
 </document>

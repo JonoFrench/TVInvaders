@@ -8,6 +8,10 @@
 
 import UIKit
 import GameController
+import UISpritesTV
+import UIHighScoresTV
+import UIAlphaNumericTV
+
 
 class InvadersViewController: UIViewController, ReactToMotionEvents {
 
@@ -38,6 +42,15 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     var previousX: Double = 0
     var prevPoints: [CGPoint]?
     var lastPoints: [CGPoint]?
+    var highScore:UIHighScores = UIHighScores()
+    var highScoreYpos:CGFloat = 192
+     var highScoreHeight:CGFloat = 300
+
+    
+    var invaderPosY = 300
+    var invaderFinishY = 600
+    var invaderStride = 60
+    var invaderSize = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +74,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
         lastPoints = [CGPoint]()
         let displayLink:CADisplayLink = CADisplayLink(target: self, selector: #selector(refreshDisplay))
         displayLink.preferredFramesPerSecond = 30
-        displayLink.add(to: .main, forMode:.common)
+        displayLink.add(to: .main, forMode: .common)
     }
     
     override func viewDidLayoutSubviews() {
@@ -90,18 +103,19 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     
   
     func motionUpdate(motion: GCMotion) {
-        let x = angleOfRotation(motion: motion)
+        let x = self.angleOfRotation(motion: motion)
         if x < -30 {
-            model.leftMove = model.baseSpeed
-            model.rightMove = 0
+            self.model.leftMove = self.model.baseSpeed
+            self.model.rightMove = 0
         } else if x > 30 {
-            model.rightMove = model.baseSpeed
-            model.leftMove = 0
+            self.model.rightMove = self.model.baseSpeed
+            self.model.leftMove = 0
         } else {
-            model.rightMove = 0
-            model.leftMove = 0
+            self.model.rightMove = 0
+            self.model.leftMove = 0
         }
-        previousX = x
+        self.previousX = x
+        
     }
     
     func angleOfRotation(motion: GCMotion) -> Double {
@@ -141,17 +155,20 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     
     fileprivate func setIntro(){
         introView = UIView(frame: CGRect(x: 0, y: 0, width: (coverView?.frame.width)!, height: (coverView?.frame.height)!))
-        
+        highScore = UIHighScores.init(xPos: 0, yPos: highScoreYpos, width: (introView?.frame.width)!, height: ((coverView?.frame.height)!) - (highScoreHeight))
+
         if let introView = introView, let coverView = coverView {
             let w = coverView.frame.width
             let h = coverView.frame.height
             coverView.backgroundColor = UIColor.black.withAlphaComponent(0.10)
             coverView.addSubview(introView)
             introView.backgroundColor = .clear
-            let alpha:AlphaNumeric = AlphaNumeric()
+            highScore.drawScoreView()
+                    
+            let alpha:UIAlphaNumeric = UIAlphaNumeric()
             
             let title = UIView(frame: CGRect(x: 0, y: 20, width: w, height: 90))
-            title.addSubview(alpha.get(string: "UIVIEW", size: (title.frame.size), fcol: .orange, bcol:.green ))
+            title.addSubview(alpha.get(string: "RETRO TV", size: (title.frame.size), fcol: .orange, bcol:.green ))
             title.backgroundColor = .clear
             introView.addSubview(title)
             
@@ -170,16 +187,20 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             subTitle3.backgroundColor = .clear
             introView.addSubview(subTitle3)
             introView.layoutIfNeeded()
+            introView.addSubview(highScore.highScoreView)
+                     highScore.animateIn()
+                  
         }
-        setIntroInvaders()
+        setIntroInvaders2()
         self.view.bringSubviewToFront(coverView!)
     }
     
     fileprivate func setIntroInvaders() {
+        var invaderType = 0
         let step = viewWidth / 6
         for i in stride(from: step, to: step * 6, by: step) {
             for z in stride(from: 300, to: 600, by: 60){
-                let invader:Invader = Invader(pos: CGPoint(x: viewWidth / 2, y: 20), height: 40, width: 40)
+                let invader:Invader = Invader(pos: CGPoint(x: viewWidth / 2, y: 20), height: 40, width: 40,invaderType:invaderType)
                 invader.spriteView?.alpha = 0
                 invader.spriteView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 self.gameView.addSubview(invader.spriteView!)
@@ -193,6 +214,32 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                 }, completion: { (finished: Bool) in
                 })
             }
+            invaderType += 1
+        }
+    }
+    
+    fileprivate func setIntroInvaders2() {
+        var invaderType = 0
+        let step = viewWidth / 6
+        for i in stride(from: step + gameView.frame.minX, to: (step * 6) + gameView.frame.minX, by: step) {
+            invaderType = 0
+            for z in stride(from: invaderPosY, to: invaderFinishY, by: invaderStride){
+                let invader:Invader = Invader(pos: CGPoint(x: viewWidth / 2, y: 20), height: invaderSize, width: invaderSize, invaderType:invaderType)
+                invader.spriteView?.alpha = 0
+                invader.spriteView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                self.view.addSubview(invader.spriteView!)
+                invaders.append(invader)
+                invader.animate()
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+                    invader.spriteView?.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    invader.spriteView?.alpha = 1
+                    invader.spriteView?.center = CGPoint(x: i, y: CGFloat(z))
+                    invader.position = CGPoint(x: i, y: CGFloat(z))
+                }, completion: { (finished: Bool) in
+                })
+                invaderType += 1
+            }
+            
         }
     }
     
@@ -204,6 +251,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                 invader.spriteView?.center = CGPoint(x: self.viewWidth / 2, y: 20)
             }, completion: { (finished: Bool) in
                 invader.spriteView?.removeFromSuperview()
+                invader.stopAnimating = true
             })
         }
     }
@@ -212,7 +260,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
         for b in bombs {
             b.spriteView?.removeFromSuperview()
         }
-        let alpha:AlphaNumeric = AlphaNumeric()
+        let alpha:UIAlphaNumeric = UIAlphaNumeric()
         gameoverView = UIView(frame: CGRect(x: 0, y: viewHeight / 2, width: (coverView?.frame.width)!, height: 40))
         if let gameoverView = gameoverView {
             let gov = UIView(frame: CGRect(x: 0, y: 0, width: gameoverView.frame.width, height: gameoverView.frame.height))
@@ -315,14 +363,14 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     
     fileprivate func setScore() {
         let scoreString = String(format: "%06d", model.score)
-        let alpha:AlphaNumeric = AlphaNumeric()
+        let alpha:UIAlphaNumeric = UIAlphaNumeric()
         scoreView = alpha.getStringView(string: scoreString, size: (scoreBox?.frame.size)!, fcol: .white, bcol: .red)
         scoreBox?.addSubview(scoreView.charView!)
         
     }
     
     func updateScore() {
-        let alpha:AlphaNumeric = AlphaNumeric()
+        let alpha:UIAlphaNumeric = UIAlphaNumeric()
         let scoreString = String(format: "%06d", model.score)
         for (index, char) in scoreString.enumerated() {
             alpha.updateChar(char: char, viewArray: scoreView.charViewArray[index], fcol: .white, bcol: .red)
@@ -334,7 +382,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             levelView?.removeFromSuperview()
         }
         let levelString = "LEVEL\(model.level)"
-        let alpha:AlphaNumeric = AlphaNumeric()
+        let alpha:UIAlphaNumeric = UIAlphaNumeric()
         let lv = alpha.getStringView(string: levelString, size: (levelBox?.frame.size)!, fcol: .white, bcol: .red)
         levelView = lv.charView
         levelBox?.addSubview(levelView!)
@@ -345,7 +393,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             livesView?.removeFromSuperview()
         }
         let levelString = "Lives\(model.lives)"
-        let alpha:AlphaNumeric = AlphaNumeric()
+        let alpha:UIAlphaNumeric = UIAlphaNumeric()
         let lv = alpha.getStringView(string: levelString, size: (livesBox?.frame.size)!, fcol: .white, bcol: .red)
         livesView = lv.charView
         livesBox?.addSubview(livesView!)
@@ -401,12 +449,13 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     
     fileprivate func setInvaders() {
         invaders.removeAll()
+        var invaderType = 0
         var delay:Double = 0.0
         let step = viewWidth / 6
         let levelPos = model.level < 5 ? model.level * 20 : 100
         for i in stride(from: step, to: step * 6, by: step) {
             for z in stride(from: 100 + levelPos, to: 400 + levelPos, by: 60){
-                let invader:Invader = Invader(pos: CGPoint(x: viewWidth / 2, y: 20), height: 40, width: 40)
+                let invader:Invader = Invader(pos: CGPoint(x: viewWidth / 2, y: 20), height: 40, width: 40,invaderType:invaderType)
                 model.numInvaders += 1
                 invader.spriteView?.alpha = 0
                 invader.spriteView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
@@ -422,15 +471,16 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                 })
                 delay += 0.020
             }
+            invaderType += 1
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.0)  {
             self.model.gameState = .playing
             self.invaderSound()
         }
     }
     
     func invaderSound() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.25) {
             self.soundFX.invaderSound()
             if self.model.gameState == .playing || self.model.gameState == .loading || self.model.gameState == .starting {
                 self.invaderSound()
@@ -446,7 +496,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             if Int.random(in: 0...300) == 1 {
                 motherShip = MotherShip(pos: CGPoint(x: self.gameView.frame.width + 10, y: yPos), height: 30, width: 45)
                 self.gameView.addSubview(motherShip!.spriteView!)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.1) {
                     self.motherSound()
                 }
                 motherShip?.animate()
@@ -464,7 +514,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
     
     fileprivate func motherSound(){
         self.soundFX.motherSound()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.25) {
             if self.motherShip != nil {
                 if !(self.motherShip?.isDead)! {
                     self.motherSound()
@@ -544,7 +594,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                             self.model.gameState = .gameOver
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.0) {
                             //self.model.lives -= 1
                             if self.model.lives == 0 {
                                 //self.model.gameState = .gameOver
@@ -579,11 +629,11 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             }
             
             if model.invaderXSpeed > 0 {
-                if inv.position.x > viewWidth - 10 {
+                if inv.position.x > gameView.frame.minX + viewWidth - 10 {
                     model.invaderXSpeed = -2
                 }
             } else {
-                if inv.position.x < 10 {
+                if inv.position.x < gameView.frame.minX + 10 {
                     model.invaderXSpeed = 2
                 }
             }
@@ -622,7 +672,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                 if let b = base, let i = inv.spriteView {
                     if i.frame.minY > baseLineY - 40 {
                         model.gameState = .ending
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.0) {
                             //game over They've landed
                             self.model.gameState = .gameOver
                             self.resetGame()
@@ -631,7 +681,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
                     }
                     if b.checkHit(pos: (i.frame)) {
                         model.gameState = .ending
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.0) {
                             //game over sunshine!
                             self.soundFX.baseHitSound()
                             self.model.gameState = .gameOver
@@ -683,7 +733,7 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
         case.nextLevel:
             self.model.gameState = .loading
             cleanUpBeforeNextLevel()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.0) {
                 self.nextLevel()
             }
             break
@@ -695,14 +745,16 @@ class InvadersViewController: UIViewController, ReactToMotionEvents {
             checkMothership()
             break
         case .playing:
+           
             //print("Start Time \(time.timeIntervalSinceNow)")
-            moveBase()
-            moveInvaders()
-            checkBullets()
-            checkInvaders()
-            checkBombs()
-            checkMothership()
+            self.moveBase()
+            self.moveInvaders()
+            self.checkBullets()
+            self.checkInvaders()
+            self.checkBombs()
+            self.checkMothership()
             //print("End Time \(time.timeIntervalSinceNow)")
+            
             break
         case .gameOver:
             break

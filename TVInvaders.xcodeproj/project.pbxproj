@@ -11,17 +11,83 @@
 		344BCC3B2253842300A31ADA /* InvadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC3A2253842300A31ADA /* InvadersViewController.swift */; };
 		344BCC3E2253842300A31ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC3C2253842300A31ADA /* Main.storyboard */; };
 		344BCC402253842400A31ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC3F2253842400A31ADA /* Assets.xcassets */; };
-		344BCC482253846700A31ADA /* AlphaNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC472253846700A31ADA /* AlphaNumeric.swift */; };
 		344BCC4F2253847200A31ADA /* ufo_highpitch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4A2253847200A31ADA /* ufo_highpitch.wav */; };
 		344BCC502253847200A31ADA /* invaderkilled.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4B2253847200A31ADA /* invaderkilled.wav */; };
 		344BCC512253847200A31ADA /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4C2253847200A31ADA /* shoot.wav */; };
 		344BCC522253847200A31ADA /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4D2253847200A31ADA /* explosion.wav */; };
 		344BCC532253847200A31ADA /* fastinvader1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 344BCC4E2253847200A31ADA /* fastinvader1.wav */; };
-		344BCC552253847C00A31ADA /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC542253847C00A31ADA /* Sprite.swift */; };
 		344BCC572253848C00A31ADA /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC562253848C00A31ADA /* SoundFX.swift */; };
 		344BCC592253849600A31ADA /* InvadersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC582253849600A31ADA /* InvadersModel.swift */; };
 		344BCC5B225384A000A31ADA /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BCC5A225384A000A31ADA /* extentions.swift */; };
+		34C8829723E8A9630018BB21 /* Invaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8829523E8A9630018BB21 /* Invaders.swift */; };
+		34C8829823E8A9630018BB21 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8829623E8A9630018BB21 /* Sprite.swift */; };
+		34C882E123E8B5150018BB21 /* UIAlphaNumericTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C882DA23E8B50F0018BB21 /* UIAlphaNumericTV.framework */; };
+		34C882E223E8B5190018BB21 /* UIHighScoresTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C882DD23E8B50F0018BB21 /* UIHighScoresTV.framework */; };
+		34C882E323E8B51E0018BB21 /* UISpritesTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C882E023E8B50F0018BB21 /* UISpritesTV.framework */; };
+		34C882E423E8B52A0018BB21 /* UISpritesTV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34C882E023E8B50F0018BB21 /* UISpritesTV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C882E523E8B52E0018BB21 /* UIHighScoresTV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34C882DD23E8B50F0018BB21 /* UIHighScoresTV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C882E623E8B5320018BB21 /* UIAlphaNumericTV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34C882DA23E8B50F0018BB21 /* UIAlphaNumericTV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34C8828223E8A8DA0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8827E23E8A8DA0018BB21 /* UIHighScores.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34BC995423D854360024A1BA;
+			remoteInfo = UIHighScores;
+		};
+		34C8828823E8A8EB0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8828423E8A8EB0018BB21 /* UIAlphaNumeric.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 348F9F9023D7230A0007FC65;
+			remoteInfo = UIAlphaNumeric;
+		};
+		34C8828E23E8A8FA0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8828A23E8A8FA0018BB21 /* UISprites.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 348F9F5823CE15440007FC65;
+			remoteInfo = UISprites;
+		};
+		34C882D923E8B50F0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8828423E8A8EB0018BB21 /* UIAlphaNumeric.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34C882C823E8B4C10018BB21;
+			remoteInfo = UIAlphaNumericTV;
+		};
+		34C882DC23E8B50F0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8827E23E8A8DA0018BB21 /* UIHighScores.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34C882BB23E8B4AF0018BB21;
+			remoteInfo = UIHighScoresTV;
+		};
+		34C882DF23E8B50F0018BB21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C8828A23E8A8FA0018BB21 /* UISprites.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34C882AE23E8B4920018BB21;
+			remoteInfo = UISpritesTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34C8829F23E8B0D90018BB21 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34C882E623E8B5320018BB21 /* UIAlphaNumericTV.framework in CopyFiles */,
+				34C882E523E8B52E0018BB21 /* UIHighScoresTV.framework in CopyFiles */,
+				34C882E423E8B52A0018BB21 /* UISpritesTV.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		344BCC352253842300A31ADA /* TVInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,16 +96,19 @@
 		344BCC3D2253842300A31ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		344BCC3F2253842400A31ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		344BCC412253842400A31ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		344BCC472253846700A31ADA /* AlphaNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaNumeric.swift; sourceTree = "<group>"; };
 		344BCC4A2253847200A31ADA /* ufo_highpitch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ufo_highpitch.wav; sourceTree = "<group>"; };
 		344BCC4B2253847200A31ADA /* invaderkilled.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = invaderkilled.wav; sourceTree = "<group>"; };
 		344BCC4C2253847200A31ADA /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
 		344BCC4D2253847200A31ADA /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		344BCC4E2253847200A31ADA /* fastinvader1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fastinvader1.wav; sourceTree = "<group>"; };
-		344BCC542253847C00A31ADA /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
 		344BCC562253848C00A31ADA /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFX.swift; sourceTree = "<group>"; };
 		344BCC582253849600A31ADA /* InvadersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvadersModel.swift; sourceTree = "<group>"; };
 		344BCC5A225384A000A31ADA /* extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+		34C8827E23E8A8DA0018BB21 /* UIHighScores.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIHighScores.xcodeproj; path = ../UIHighScores/UIHighScores.xcodeproj; sourceTree = "<group>"; };
+		34C8828423E8A8EB0018BB21 /* UIAlphaNumeric.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIAlphaNumeric.xcodeproj; path = ../UIAlphaNumeric/UIAlphaNumeric.xcodeproj; sourceTree = "<group>"; };
+		34C8828A23E8A8FA0018BB21 /* UISprites.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UISprites.xcodeproj; path = ../UISprites/UISprites.xcodeproj; sourceTree = "<group>"; };
+		34C8829523E8A9630018BB21 /* Invaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invaders.swift; sourceTree = "<group>"; };
+		34C8829623E8A9630018BB21 /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C882E323E8B51E0018BB21 /* UISpritesTV.framework in Frameworks */,
+				34C882E223E8B5190018BB21 /* UIHighScoresTV.framework in Frameworks */,
+				34C882E123E8B5150018BB21 /* UIAlphaNumericTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +128,12 @@
 		344BCC2C2253842300A31ADA = {
 			isa = PBXGroup;
 			children = (
+				34C8828A23E8A8FA0018BB21 /* UISprites.xcodeproj */,
+				34C8827E23E8A8DA0018BB21 /* UIHighScores.xcodeproj */,
+				34C8828423E8A8EB0018BB21 /* UIAlphaNumeric.xcodeproj */,
 				344BCC372253842300A31ADA /* TVInvaders */,
 				344BCC362253842300A31ADA /* Products */,
+				34C8829023E8A9200018BB21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,12 +148,11 @@
 		344BCC372253842300A31ADA /* TVInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				34C8829423E8A9450018BB21 /* Sprites */,
 				344BCC5A225384A000A31ADA /* extentions.swift */,
 				344BCC582253849600A31ADA /* InvadersModel.swift */,
 				344BCC562253848C00A31ADA /* SoundFX.swift */,
-				344BCC542253847C00A31ADA /* Sprite.swift */,
 				344BCC492253847200A31ADA /* Sounds */,
-				344BCC472253846700A31ADA /* AlphaNumeric.swift */,
 				344BCC382253842300A31ADA /* AppDelegate.swift */,
 				344BCC3A2253842300A31ADA /* InvadersViewController.swift */,
 				344BCC3C2253842300A31ADA /* Main.storyboard */,
@@ -99,6 +174,49 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		34C8827F23E8A8DA0018BB21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C8828323E8A8DA0018BB21 /* UIHighScores.framework */,
+				34C882DD23E8B50F0018BB21 /* UIHighScoresTV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34C8828523E8A8EB0018BB21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C8828923E8A8EB0018BB21 /* UIAlphaNumeric.framework */,
+				34C882DA23E8B50F0018BB21 /* UIAlphaNumericTV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34C8828B23E8A8FA0018BB21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C8828F23E8A8FA0018BB21 /* UISprites.framework */,
+				34C882E023E8B50F0018BB21 /* UISpritesTV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34C8829023E8A9200018BB21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34C8829423E8A9450018BB21 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				34C8829523E8A9630018BB21 /* Invaders.swift */,
+				34C8829623E8A9630018BB21 /* Sprite.swift */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 344BCC442253842400A31ADA /* Build configuration list for PBXNativeTarget "TVInvaders" */;
 			buildPhases = (
+				34C8829F23E8B0D90018BB21 /* CopyFiles */,
 				344BCC312253842300A31ADA /* Sources */,
 				344BCC322253842300A31ADA /* Frameworks */,
 				344BCC332253842300A31ADA /* Resources */,
@@ -145,12 +264,71 @@
 			mainGroup = 344BCC2C2253842300A31ADA;
 			productRefGroup = 344BCC362253842300A31ADA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 34C8828523E8A8EB0018BB21 /* Products */;
+					ProjectRef = 34C8828423E8A8EB0018BB21 /* UIAlphaNumeric.xcodeproj */;
+				},
+				{
+					ProductGroup = 34C8827F23E8A8DA0018BB21 /* Products */;
+					ProjectRef = 34C8827E23E8A8DA0018BB21 /* UIHighScores.xcodeproj */;
+				},
+				{
+					ProductGroup = 34C8828B23E8A8FA0018BB21 /* Products */;
+					ProjectRef = 34C8828A23E8A8FA0018BB21 /* UISprites.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				344BCC342253842300A31ADA /* TVInvaders */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		34C8828323E8A8DA0018BB21 /* UIHighScores.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIHighScores.framework;
+			remoteRef = 34C8828223E8A8DA0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34C8828923E8A8EB0018BB21 /* UIAlphaNumeric.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIAlphaNumeric.framework;
+			remoteRef = 34C8828823E8A8EB0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34C8828F23E8A8FA0018BB21 /* UISprites.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UISprites.framework;
+			remoteRef = 34C8828E23E8A8FA0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34C882DA23E8B50F0018BB21 /* UIAlphaNumericTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIAlphaNumericTV.framework;
+			remoteRef = 34C882D923E8B50F0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34C882DD23E8B50F0018BB21 /* UIHighScoresTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIHighScoresTV.framework;
+			remoteRef = 34C882DC23E8B50F0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34C882E023E8B50F0018BB21 /* UISpritesTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UISpritesTV.framework;
+			remoteRef = 34C882DF23E8B50F0018BB21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		344BCC332253842300A31ADA /* Resources */ = {
@@ -175,12 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				344BCC3B2253842300A31ADA /* InvadersViewController.swift in Sources */,
+				34C8829823E8A9630018BB21 /* Sprite.swift in Sources */,
 				344BCC592253849600A31ADA /* InvadersModel.swift in Sources */,
 				344BCC392253842300A31ADA /* AppDelegate.swift in Sources */,
 				344BCC5B225384A000A31ADA /* extentions.swift in Sources */,
 				344BCC572253848C00A31ADA /* SoundFX.swift in Sources */,
-				344BCC552253847C00A31ADA /* Sprite.swift in Sources */,
-				344BCC482253846700A31ADA /* AlphaNumeric.swift in Sources */,
+				34C8829723E8A9630018BB21 /* Invaders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +502,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.TVInvaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.tvInvaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Debug;
 		};
@@ -343,10 +522,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.TVInvaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaypeeff.tvInvaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
 			name = Release;
 		};
